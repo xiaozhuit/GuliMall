@@ -53,7 +53,35 @@
                 <artifactId>commons-lang</artifactId>
                 <version>2.6</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+
+
         </dependencies>
+
     <!--依赖管理，在dependencies引入SpringCloud Alibaba相关依赖不需要引入版本号了-->
     <dependencyManagement>
         <dependencies>
